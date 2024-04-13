@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* Set font-family to Arial */
+            background-color: #c71585; /* Set background color to dark pink */
+        }
+        p {
+            color: black; /* Set text color to black */
+            font-weight: bold; /* Set font weight to bold */
+        }
+        img {
+            max-width: 100%; /* Make the image responsive */
+            height: auto; /* Maintain aspect ratio */
+            display: block; /* Ensure proper layout */
+            margin: auto; /* Center the image horizontally */
+        }
+        audio {
+            display: none; /* Hide the audio element by default */
+        }
+        button {
+            background-color: green; /* Set background color to green */
+            color: black; /* Set text color to black */
+            padding: 10px 20px; /* Add padding for better appearance */
+            border: none; /* Remove border */
+            cursor: pointer; /* Change cursor to pointer on hover */
+            border-radius: 5px; /* Add border-radius for rounded corners */
+            margin-top: 10px; /* Add some space between button and image */
+        }
+    </style>
+</head>
+<body>
+
+    <p>Backshots at my place, who says no? makenaaa</p>
+
+    <img src="image.jpg" alt="Description of the image">
+
+    <button id="toggleButton" onclick="toggleAudio()">Play</button>
+
+    <audio id="myAudio" controls>
+        <source src="audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        function toggleAudio() {
+            var audio = document.getElementById("myAudio");
+            var button = document.getElementById("toggleButton");
+            if (audio.paused) {
+                audio.play();
+                button.textContent = "Pause";
+            } else {
+                audio.pause();
+                button.textContent = "Play";
+            }
+        }
+    </script>
+
+</body>
+</html>
